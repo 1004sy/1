@@ -17,8 +17,38 @@
 <style>
 body {
 	font-size: 35px;
-	padding: 20px;
+	padding: 0px;
 }
+
+#wrap {
+	margin: 0px 0px 0px 0px;
+	padding: 0px 0px 0px 0px;
+}
+
+#content {
+	padding: 0px 20px 0px 20px;
+	margin: 0px 0px 100px 0px;
+}
+
+.box-top {
+	padding: 50px 0px 50px 0px;
+	border-bottom: 1px solid #000000;
+	background-color: #990033;
+	text-align: center;
+	font-weight: bold;
+	line-height: 70px;
+}
+
+.box-top .p1 {
+	font-size: 60px;
+	color: #ffffff;
+}
+
+.box-top .p2 {
+	font-size: 40px;
+	color: #FFFF99;
+}
+
 
 #btnCopy {
 	font-size: 40px;
@@ -31,11 +61,8 @@ body {
 	padding: 8px;
 }
 
-.box-top {
-	padding: 20px 0px 20px 0px;
-	border-bottom: 1px solid #000000;
-	background-color: yellow;
-}
+
+
 
 .box {
 	padding: 20px 0px 20px 0px;
@@ -52,11 +79,15 @@ body {
 	vertical-align: text-top;
 }
 
-
 .depth {
 	padding: 0px 0px 0px 40px;
 }
 
+.label {
+	vertical-align: text-top;
+	margin-top: 10px;
+	font-size: 36px;
+}
 </style>
 
 
@@ -64,44 +95,50 @@ body {
 <body>
 
 	<div id="wrap">
-		<div class="">
-			
-		</div>
-		
-		<div class="box">
-			<div>
-				<span class="badge">1</span>아래버튼을 클릭 하면 클립보드에 팬닉을 복사 하세요.<br>
-			</div>
-			<div class="depth">
-				<button class="btn btn-primary" id="btnCopy" type="button">팬닉 클립보드에 복사</button>
-				<input id="txtNick" type="text" value="수연s♥">
-			</div>
+		<div class="box-top">
+			<p class="p1">수연이 팬닉<br>달아 주실려고 오셨군요~</p>
+			<p class="p2">얼른 팬닉 달고 <span class="label label-success">팬가입</span> 하러 가요</p>
 		</div>
 
-		<div class="box">
-			<div>
-				<span class="badge">2</span>어플의 닉네임 설정으로 이동합니다.
+		<div id="content">
+
+			<div class="box">
+				<div>
+					<span class="badge">1</span>아래버튼을 클릭 하면 클립보드에 팬닉을 복사 하세요.
+					<br>
+				</div>
+				<div class="depth">
+					<button class="btn btn-primary" id="btnCopy" type="button">팬닉 클립보드에 복사</button>
+					<input id="txtNick" type="text" value="수연s♥">
+				</div>
 			</div>
-			<div class="depth">
-				*상단왼쪽 아이콘 > 설정 > 닉네임 설정
-				<img src="./assets/img/m01.png" width="100%">
+
+			<div class="box">
+				<div>
+					<span class="badge">2</span>어플의 닉네임 설정으로 이동합니다.
+				</div>
+				<div class="depth">
+					*상단왼쪽 아이콘 > 설정 > 닉네임 설정 <img src="./assets/img/m01.png" width="100%">
+				</div>
 			</div>
+
+			<div class="box">
+				<div>
+					<span class="badge">3</span>클립보드를 이용하여 닉네임을 설정합니다
+				</div>
+				<div class="depth">
+					<img src="./assets/img/m03.png" width="60%">
+				</div>
+			</div>
+
+			<div class="box">
+				<div>
+					<span class="badge">4</span>수연이에게 자랑하고 <span class="label label-success">팬가입</span> 합니다.
+				</div>
+			</div>
+
 		</div>
 
-		<div class="box">
-			<div>
-				<span class="badge">3</span>클립보드를 이용하여 닉네임을 설정합니다
-			</div>
-			<div class="depth">
-				<img src="./assets/img/m03.png" width="40%">
-			</div>
-		</div>
-		
-		<div class="box">
-			<div>
-				<span class="badge">4</span>수연이에게 자랑합니다.
-			</div>
-		</div>
 
 	</div>
 
