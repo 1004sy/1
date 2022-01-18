@@ -15,47 +15,22 @@
 
 
 <style>
-body {
-	font-size: 35px;
-	padding: 20px;
-}
-
-#btnCopy {
-	font-size: 40px;
-	padding: 10px;
-}
-
-#txtNick {
-	width: 140px;
-	height: 75px;
-	padding: 8px;
-}
-
-.box-top {
-	padding: 20px 0px 20px 0px;
-	border-bottom: 1px solid #000000;
-	background-color: yellow;
-}
-
-.box {
-	padding: 20px 0px 20px 0px;
-	border-bottom: 1px solid #000000;
-}
-
-.badge {
-	width: 36px;
-	height: 36px;
-	font-size: 30px;
-	padding: 3px 3px;
-	background-color: #777777;
-	border-radius: 18px;
-	vertical-align: text-top;
-}
-
-
-.depth {
-	padding: 0px 0px 0px 40px;
-}
+	body {
+		font-size: 35px;
+	}
+	
+	td {padding: 5px 5px 30px 5px !important;}
+	
+	#btnCopy {
+		font-size: 45px;
+		padding: 10px;
+	}
+	
+	#txtNick {
+		width: 140px;
+		height: 75px;
+		padding: 8px;
+	}
 
 </style>
 
@@ -64,44 +39,37 @@ body {
 <body>
 
 	<div id="wrap">
-		<div class="box-top">
-			aaa
-		</div>
-		
-		<div class="box">
-			<div>
-				<span class="badge">1</span>아래버튼을 클릭 하면 클립보드에 팬닉을 복사 하세요.<br>
-			</div>
-			<div class="depth">
-				<button class="btn btn-primary" id="btnCopy" type="button">팬닉 클립보드에 복사</button>
-				<input id="txtNick" type="text" value="수연s♥">
-			</div>
-		</div>
 
-		<div class="box">
-			<div>
-				<span class="badge">2</span>어플의 닉네임 설정으로 이동합니다.
-			</div>
-			<div class="depth">
-				*상단왼쪽 아이콘 > 설정 > 닉네임 설정
-				<img src="./assets/img/m01.png" width="100%">
-			</div>
-		</div>
+		<table class="table table-bordered table-condensed">
+			<colgroup>
+				<col style="width: 40px">
+				<col style="">
+			</colgroup>
+			<tr>
+				<td>1.</td>
+				<td>
+					<p>아래버튼을 클릭 하면 클립보드에 팬닉이 복사됩니다.</p>
+					<button class="btn btn-primary" id="btnCopy" type="button">팬닉 클립보드에 복사</button> 
+					<input id="txtNick" type="text"	value="수연s♥">
+				</td>
+			</tr>
+			<tr>
+				<td>2.</td>
+				<td>
+					<p>어플의 닉네임 설정으로 이동합니다.<br>
+					   *상단왼쪽 아이콘 > 설정 > 닉네임 설정</p>
+					<img src="./assets/img/m1.png" width="100%">
+				</td>
+			</tr>
+			<tr>
+				<td>3.</td>
+				<td>
+					<p>클립보드를 이용하여 닉네임을 설정합니다.</p>
+					<img src="./assets/img/m2.png" width="50%">
+				</td>
+			</tr>
 
-		<div class="box">
-			<div>
-				<span class="badge">3</span>클립보드를 이용하여 닉네임을 설정합니다
-			</div>
-			<div class="depth">
-				<img src="./assets/img/m03.png" width="40%">
-			</div>
-		</div>
-		
-		<div class="box">
-			<div>
-				<span class="badge">4</span>수연이에게 자랑합니다.
-			</div>
-		</div>
+		</table>
 
 	</div>
 
@@ -111,11 +79,11 @@ body {
 
 
 <script type="text/javascript">
-	//클립보드 복사
-	$("#btnCopy").on("click", function() {
-		$("#txtNick").select();//복사할 텍스트를 선택
-		document.execCommand("copy"); //클립보드 복사 실행
-	});
+//클립보드 복사
+$("#btnCopy").on("click", function(){
+	$("#txtNick").select();//복사할 텍스트를 선택
+	document.execCommand("copy"); //클립보드 복사 실행
+});
 </script>
 
 
