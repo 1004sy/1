@@ -15,22 +15,7 @@
 
 
 <style>
-	body {
-		font-size: 35px;
-	}
-	
-	td {padding: 5px 5px 30px 5px !important;}
-	
-	#btnCopy {
-		font-size: 45px;
-		padding: 10px;
-	}
-	
-	#txtNick {
-		width: 140px;
-		height: 75px;
-		padding: 8px;
-	}
+
 
 </style>
 
@@ -38,39 +23,8 @@
 </head>
 <body>
 
-	<div id="wrap">
-
-		<table class="table table-bordered table-condensed">
-			<colgroup>
-				<col style="width: 40px">
-				<col style="">
-			</colgroup>
-			<tr>
-				<td>1.</td>
-				<td>
-					<p>아래버튼을 클릭 하면 클립보드에 팬닉이 복사됩니다.</p>
-					<button class="btn btn-primary" id="btnCopy" type="button">팬닉 클립보드에 복사</button> 
-					<input id="txtNick" type="text"	value="수연s♥">
-				</td>
-			</tr>
-			<tr>
-				<td>2.</td>
-				<td>
-					<p>어플의 닉네임 설정으로 이동합니다.<br>
-					   *상단왼쪽 아이콘 > 설정 > 닉네임 설정</p>
-					<img src="./assets/img/m1.png" width="100%">
-				</td>
-			</tr>
-			<tr>
-				<td>3.</td>
-				<td>
-					<p>클립보드를 이용하여 닉네임을 설정합니다.</p>
-					<img src="./assets/img/m2.png" width="50%">
-				</td>
-			</tr>
-
-		</table>
-
+	<div id="os">
+	
 	</div>
 
 
@@ -79,13 +33,36 @@
 
 
 <script type="text/javascript">
+$(document).ready(function(){
+	
+	$("#os").html(checkMobile());
+	
+	
+});
+
 //클립보드 복사
 $("#btnCopy").on("click", function(){
 	$("#txtNick").select();//복사할 텍스트를 선택
 	document.execCommand("copy"); //클립보드 복사 실행
 });
+
+
+
+function checkMobile(){
+ 
+    var varUA = navigator.userAgent.toLowerCase(); //userAgent 값 얻기
+ 
+    if ( varUA.indexOf('android') > -1) {
+        //안드로이드
+        return "android";
+    } else if ( varUA.indexOf("iphone") > -1||varUA.indexOf("ipad") > -1||varUA.indexOf("ipod") > -1 ) {
+        //IOS
+        return "ios";
+    } else {
+        //아이폰, 안드로이드 외
+        return "other";
+    }
+    
+}
 </script>
-
-
-
 </html>
