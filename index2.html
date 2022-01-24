@@ -42,13 +42,18 @@
 		<button class="btn btn-primary" id="btnCopy" type="button">클립보드 테스트</button>
 		<input id="txtNick" type="text" value="클립보드테스트♥">
 	</div>
+	
+	
+	<div id="display">
+		
+	</div>
 </body>
 
 
 
 <script type="text/javascript">
 $(document).ready(function(){
-	
+	var os = checkMobile()
 	$("#os").html(checkMobile());
 	
 	
@@ -67,7 +72,11 @@ function checkMobile(){
     var varUA = navigator.userAgent.toLowerCase(); //userAgent 값 얻기
  
     if ( varUA.indexOf('android') > -1) {
+    	
+    	$("#display").append("<p>android</p>");
+    	$("#display").append("<p>앱실행</p>");
         //안드로이드
+        location.href = "https://play.google.com/store/apps/details?id=com.navercorp.android.smartboard"
         return "android";
     } else if ( varUA.indexOf("iphone") > -1||varUA.indexOf("ipad") > -1||varUA.indexOf("ipod") > -1 ) {
         //IOS
@@ -78,5 +87,10 @@ function checkMobile(){
     }
     
 }
+
+
+
+
+
 </script>
 </html>
